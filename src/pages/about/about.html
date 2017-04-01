@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Roles
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="createRole()">Create Role</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let role of roles">
+    <ion-card (click)="viewRoleDetail(role)">
+      <ion-card-content>{{role.id}} {{role.name}}</ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

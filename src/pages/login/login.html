@@ -1,0 +1,25 @@
+<ion-content padding>
+  <form [formGroup]="credentialForm" (ngSubmit)="login()">
+    <ion-item>
+      <ion-label>IMS Rest Server</ion-label>
+      <ion-select formControlName="server">
+        <ion-option value="https://sinv-56028.edu.hsr.ch">https://sinv-56028.edu.hsr.ch</ion-option>
+        <ion-option value="http://mars.imagic.ch:3171">http://mars.imagic.ch:3171</ion-option>
+        <ion-option value="http://mars.imagic.ch:3164">http://mars.imagic.ch:3164</ion-option>
+        <ion-option value="http://mars.imagic.ch:3163">http://mars.imagic.ch:3163</ion-option>
+        <ion-option value="http://mars.imagic.ch:3162">http://mars.imagic.ch:3162</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Username</ion-label>
+      <ion-input type="text" value="" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button>Login</button>
+    </div>
+  </form>
+</ion-content>
